@@ -51,7 +51,7 @@ T.Pane {
     implicitHeight: Math.max(implicitBackgroundHeight + topInset + bottomInset,
                              implicitContentHeight + topPadding + bottomPadding)
 
-    padding: VLCStyle.margin_normal
+    padding: VLCStyle.margin_large
 
     readonly property ColorContext colorContext: ColorContext {
         id: theme
@@ -100,7 +100,7 @@ T.Pane {
         //would be parented (and layouted) to the Layout
         ColumnLayout {
             anchors.fill: parent
-            spacing: VLCStyle.margin_xsmall
+            spacing: VLCStyle.margin_small
 
             Widgets.ListViewExt {
                 id: listView
