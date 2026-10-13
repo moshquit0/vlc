@@ -99,7 +99,8 @@ T.ItemDelegate {
 
     background: Widgets.AnimatedBackground {
         enabled: theme.initialized
-        color: theme.bg.primary
+        // Keep the active destination visually distinct without competing with media artwork.
+        color: (control.checked || control.hovered) ? theme.bg.secondary : theme.bg.primary
         border.color: visualFocus ? theme.visualFocus : "transparent"
 
         radius: control.radius
@@ -152,7 +153,7 @@ T.ItemDelegate {
 
             verticalAlignment: Text.AlignVCenter
 
-            color: control.checked ? theme.fg.secondary : theme.fg.primary
+            color: theme.fg.primary
 
             elide: Text.ElideRight
 
